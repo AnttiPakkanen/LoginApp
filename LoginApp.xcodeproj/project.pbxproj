@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		7748781F2982E0060041B3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748781E2982E0060041B3D7 /* AppDelegate.swift */; };
 		774878212982E0060041B3D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774878202982E0060041B3D7 /* SceneDelegate.swift */; };
-		774878232982E0060041B3D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774878222982E0060041B3D7 /* ViewController.swift */; };
+		774878232982E0060041B3D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774878222982E0060041B3D7 /* LoginViewController.swift */; };
 		774878262982E0060041B3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774878242982E0060041B3D7 /* Main.storyboard */; };
 		774878282982E0090041B3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774878272982E0090041B3D7 /* Assets.xcassets */; };
 		7748782B2982E0090041B3D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774878292982E0090041B3D7 /* LaunchScreen.storyboard */; };
+		77487833298381780041B3D7 /* WelcomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77487832298381780041B3D7 /* WelcomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7748781B2982E0060041B3D7 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7748781E2982E0060041B3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		774878202982E0060041B3D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		774878222982E0060041B3D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		774878222982E0060041B3D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		774878252982E0060041B3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		774878272982E0090041B3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7748782A2982E0090041B3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7748782C2982E0090041B3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77487832298381780041B3D7 /* WelcomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				7748781E2982E0060041B3D7 /* AppDelegate.swift */,
 				774878202982E0060041B3D7 /* SceneDelegate.swift */,
-				774878222982E0060041B3D7 /* ViewController.swift */,
+				774878222982E0060041B3D7 /* LoginViewController.swift */,
+				77487832298381780041B3D7 /* WelcomViewController.swift */,
 				774878242982E0060041B3D7 /* Main.storyboard */,
 				774878272982E0090041B3D7 /* Assets.xcassets */,
 				774878292982E0090041B3D7 /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				774878232982E0060041B3D7 /* ViewController.swift in Sources */,
+				774878232982E0060041B3D7 /* LoginViewController.swift in Sources */,
 				7748781F2982E0060041B3D7 /* AppDelegate.swift in Sources */,
 				774878212982E0060041B3D7 /* SceneDelegate.swift in Sources */,
+				77487833298381780041B3D7 /* WelcomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.multibrands.LoginApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.multibrands.LoginApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
