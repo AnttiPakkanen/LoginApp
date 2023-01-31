@@ -17,10 +17,4 @@ class WelcomViewController: UIViewController {
         super.viewDidLoad()
         welcomLabelText.text = welcomLabel
     }
-    
-
-    @IBAction func logOutButtonPressed(_ sender: UIButton) {
-        dismiss(animated: true)
-        
-    }
 }

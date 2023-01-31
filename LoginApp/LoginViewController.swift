@@ -12,11 +12,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         if userNameTextField.text != userName && passwordTextField.text != password ||
         userNameTextField.text == userName && passwordTextField.text != password ||
@@ -29,16 +24,17 @@ class LoginViewController: UIViewController {
             
             passwordTextField.text = nil
         }
-        
-        
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? WelcomViewController else { return }
         settingsVC.welcomLabel = userNameTextField.text
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         
+        self.view.endEditing(true)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -47,7 +43,6 @@ class LoginViewController: UIViewController {
         passwordTextField.text = nil
     }
     
-
     @IBAction func forgotUserNameButtonPressed(_ sender: UIButton) {
         let alertUserName = UIAlertController(title: "Ooops!", message: "Your user name is Sky", preferredStyle: .alert)
         let closeActionForgotUserName = UIAlertAction(title: "Close", style: .default)

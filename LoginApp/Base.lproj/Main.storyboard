@@ -116,7 +116,6 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logOutButtonPressed:" destination="a6J-xy-a5n" eventType="touchUpInside" id="6Fi-cl-Ru1"/>
                                     <segue destination="IM4-8s-vc1" kind="unwind" unwindAction="unwindFor:" id="Y9h-bW-qlw"/>
                                 </connections>
                             </button>
