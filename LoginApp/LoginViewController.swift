@@ -10,19 +10,41 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet var userNameTextField: UITextField!
-    
     @IBOutlet var passwordTextField: UITextField!
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
+    
     @IBAction func logInButtonPressed(_ sender: UIButton) {
+        if userNameTextField.text != userName && passwordTextField.text != password ||
+        userNameTextField.text == userName && passwordTextField.text != password ||
+        userNameTextField.text != userName && passwordTextField.text == password {
+            let alertLogIn = UIAlertController(title: "INVALID USER NAME OR PASSWORD", message: "Please enter correct user name or password", preferredStyle: .alert)
+            let closeLogIn = UIAlertAction(title: "Close", style: .default)
+            
+            alertLogIn.addAction(closeLogIn)
+            present(alertLogIn, animated: true)
+            
+            passwordTextField.text = nil
+        }
+        
+        
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let settingsVC = segue.destination as? WelcomViewController else { return }
+        settingsVC.welcomLabel = userNameTextField.text
+        
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let _ = segue.source as? WelcomViewController else { return }
+        userNameTextField.text = nil
+        passwordTextField.text = nil
     }
     
 
@@ -43,6 +65,7 @@ class LoginViewController: UIViewController {
         present(alertForgotPassword, animated: true)
     }
     
-    
+    private let userName = "Sky"
+    private let password = "123456"
 }
 
